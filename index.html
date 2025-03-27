@@ -8,70 +8,125 @@
     <!-- fonts: italianno (h1), kalina (h2), oswald (h3), kanit (p) -->
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Kalnia:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
+    <!--citations-->
+
+    <!--
+Code copied from: https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_element
+Author: unknown
+Name: Descendant Selector
+Description: The following example selects all <p> elements inside <div> elements
+Date retrieved: 26th March 2025
+-->
+
     <style>
-      /* General Styling */
+      html,
       body {
         font-size: 1em;
         background-color: #E6D7C4;
         margin: 0;
-        padding: 50px;
+        padding: 0px;
       }
 
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+
+      /*fonts*/
       h1 {
         font-family: "Italianno", cursive;
         font-weight: 500;
         font-style: normal;
+        line-height: 0.01;
       }
 
       h2 {
         font-family: "Kalnia", serif;
         font-optical-sizing: auto;
-        font-weight: 400;
+        font-weight: 300;
         font-style: normal;
         font-variation-settings: "wdth" 100;
+        line-height: 0.01;
+
       }
 
       h3 {
         font-family: "Oswald", sans-serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 25px;
+        font-size: 12px;
         letter-spacing: 4px;
         position: absolute;
+
       }
 
       p {
         font-family: "Kanit", sans-serif;
         font-weight: 300;
         font-style: normal;
+        font-size: 15px;
+      }
+
+      #mainSection h3 {
+        color: #E6D7C4;
+        text-align: center;
+        top: 90px;
+        position: relative;
+      }
+
+      #mainSection h2 {
+        color: #583322;
+        position: relative;
+        top: 120px;
+        font-weight: 400;
+        text-align: center;
+        font-size: 60px;
+      }
+
+      #mainSection h1 {
+        color: #583322;
+        position: relative;
+        top: 100px;
+        text-align: center;
+        font-size: 250px;
+        margin-bottom: 50px;
+        margin-top: 90px;
+      }
+
+      #mainSection p {
+        color: #583322;
+        position: relative;
+        top: 150px;
+        text-align: center
       }
 
       .button {
         border: none;
         background-color: #583322;
         color: #E6D7C4;
-        padding: 15px 40px;
+        padding: 5px 20px;
         text-align: center;
         margin: 15px 20px;
         cursor: pointer;
         border-radius: 50px;
-        font-size: 25px;
+        font-size: 15px;
 
         font-family: "Kanit", sans-serif;
         font-weight: 400;
         font-style: normal;
       }
-      
-        .buttonClicked {
+
+      .buttonClicked {
         border: none;
         background-color: #E6D7C4;
         color: #583322;
-        padding: 15px 40px;
+        padding: 5px 20px;
         text-align: center;
         margin: 15px 20px;
         cursor: pointer;
         border-radius: 50px;
-        font-size: 25px;
+        font-size: 15px;
 
         font-family: "Kanit", sans-serif;
         font-weight: 400;
@@ -85,50 +140,56 @@
 
       .button1 {
         position: fixed;
-        top: 20px;
+        top: 0px;
       }
 
       #header {
         width: 100%;
-        height: 120px;
+        height: 60px;
         position: fixed;
         top: 0;
         right: 0;
         background-color: #583322;
       }
-      
+
+      #footer {
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        color: #583322;
+        line-height: 60px;
+      }
     </style>
   </head>
   <body>
-    
-    <p style="color:#583322; position:relative; top:180px; text-align:center; font-size: 50px;" >let’s talk!</p>
+    <!--mainSection and backcolor-->
+    <div id="backdrop"> </div>
 
-    <h2 style="color:#583322; position:relative; top: 260px; font-size: 80px; margin-left: 180px; margin-right: 50;">stay in</h2>
-    <h1 style="color:#583322; font-size: 300px; margin-left: 280px; margin-top: 150px">touch</h1>
-    
-
-    <p style="color:#583322; position:relative; top: -500px; margin-left: 70%; margin-right: 150px; text-align:justify; font-size: 25px"> send an email! <br> Mississauga, ON <br> linkedin</p>
-
-
-    <p style="background-color:#583322; width: 100%; height: 90px; text-align:center; color: #E6D7C4; line-height: 90px; font-size: 25px"> © 2025 Anisha Thiruselvam. All Rights Reserved.</p>
+    <div id="mainSection">
+      <h2>stay in</h2>
+      <h1>touch</h1>
+      <p>send an email!<br>linkedin<br>Mississauga, ON</p>
+    </div>
+    <!--footer-->
+    <div id="footer">
+      <p>© 2025 Anisha Thiruselvam. All Rights Reserved.</p>
+    </div>
 
     <!--Header-->
     <div id="header">
       <a href="https://anishathiruselvam.github.io/contactUs/">
-        <button class="buttonClicked button1" style="right: 20px;">contact me</button>
-      </a>
-      <a href="https://anishathiruselvam.github.io/projectPage/">
-        <button class="button button1" style="right: 300px;">playground</button>
-      </a>
+        <button class="button button1" style="right: 10px;">contact me</button></a>
       <a href="https://anishathiruselvam.github.io/playgroundPage/">
-        <button class="button button1" style="right: 580px;">projects</button>
-      </a>
-         <a href="https://anishathiruselvam.github.io/MainPage/">
-        <button class="button button1" style="right: 810px;">home</button>
-      </a>
-      <h3 style="color:#E6D7C4; left: 40px">
-        ANISHA<br>THIRUSELVAM
-      </h3>
+        <button class="button button1" style="right: 140px;">playground</button></a>
+      <a href="https://anishathiruselvam.github.io/projectPage/">
+        <button class="button button1" style="right: 270px;">projects</button></a>
+      <a href="https://anishathiruselvam.github.io/MainPage/">
+        <button class="buttonClicked button1" style="right: 400px;">home</button></a>
+
+      <h3 style="color: #E6D7C4; left: 40px">ANISHA<br>THIRUSELVAM</h3>
 
     </div>
   </body>
